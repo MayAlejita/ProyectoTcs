@@ -40,7 +40,8 @@ import { EditarProductoComponent } from './componentes/productos/editar-producto
   ],
   exports: [
     OficinaComponent,
-    EmpresaComponent
+    EmpresaComponent,
+    EditarProductoComponent
   ]
 })
 export class AdministracionModule { }
