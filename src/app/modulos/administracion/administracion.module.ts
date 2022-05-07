@@ -15,6 +15,7 @@ import { AreaDialogComponent } from './componentes/area-dialog/area-dialog.compo
 import { ProductoComponent } from './componentes/productos/producto/producto.component';
 import { LoteComponent } from './componentes/productos/lote/lote.component';
 import { SpinnerComponent } from './componentes/spinner/spinner.component';
+import { EditarProductoComponent } from './componentes/productos/editar-producto/editar-producto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SpinnerComponent } from './componentes/spinner/spinner.component';
     AreaDialogComponent,
     ProductoComponent,
     LoteComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    EditarProductoComponent
   ],
   imports: [
     CommonModule,
