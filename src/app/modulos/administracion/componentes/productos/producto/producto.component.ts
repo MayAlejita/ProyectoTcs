@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
-import{ProductoServiceService} from 'src/app/shared/servicios/productos/producto-service.service'
+import{ProductoServiceService} from 'src/app/shared/servicios/productos/service/producto-service.service'
+import { Product } from 'src/app/shared/servicios/productos/model/producto-model';
 
 @Component({
   selector: 'app-producto',
@@ -14,10 +15,16 @@ export class ProductoComponent implements OnInit {
 
   constructor( private activatedRoute: ActivatedRoute, private _ProductoServiceService: ProductoServiceService) {
     this.activatedRoute.params.subscribe( params =>{
-      this.productos=this._ProductoServiceService.getProductos();
-      this.muestraSpinner=false;
+         this.getProducts();
     }
     );
+   }
+
+   getProducts() {
+      this._ProductoServiceService.getProducts().subscribe((productsData: Product[]) => {
+          this.productos = productsData;
+          this.muestraSpinner=false;
+      });
    }
 
   ngOnInit(): void {
@@ -33,11 +40,11 @@ export class ProductoComponent implements OnInit {
   }
 
   deshabilitaProducto(nombreProducto: string, codigoProducto: string, accion: string){
-    
+
   }
 
   guardarProducto(){
-    
+
   }
 
 

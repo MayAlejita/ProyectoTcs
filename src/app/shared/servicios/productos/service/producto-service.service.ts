@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { string } from 'fp-ts';
+import { Product } from '../model/producto-model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoServiceService {
 
-  private productos:Producto[]=[
+  private products:Product[]=[
     {
       id_producto: "1",
       codigo: "45124511000",
@@ -41,7 +43,7 @@ export class ProductoServiceService {
 
   ]
 
-  private productoBuscado:Producto[]=[
+  private productoBuscado:Product[]=[
     {
       id_producto: "3",
       codigo: "45124511000",
@@ -58,31 +60,20 @@ export class ProductoServiceService {
       usuario: "anita",
     }
   ]
-  
+
   constructor() { }
 
-  getProductos(){
-    return this.productos;
-  }
+  public getProducts(): any {
+       const productsObservable = new Observable(observer => {
+              setTimeout(() => {
+                  observer.next(this.products);
+              }, 1000);
+       });
+
+       return productsObservable;
+   }
 
   buscarProductos(){
     return this.productoBuscado;
   }
-}
-
-
-export interface Producto{
-  id_producto: string;
-  codigo: string;
-  nombre: string;
-  descripcion: string;
-  precio_compra: number;
-  precio_venta: number;
-  firma_farmaceutica: string;
-  concentracion: string;
-  registro_sanitario: string;
-  estado: boolean;
-  transaccion: string;
-  fecha_transaccion: string;
-  usuario: string;
 }
