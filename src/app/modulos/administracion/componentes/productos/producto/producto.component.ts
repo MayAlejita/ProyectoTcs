@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import{ProductoServiceService} from 'src/app/shared/servicios/productos/service/producto-service.service'
 import { Product } from 'src/app/shared/servicios/productos/model/producto-model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-producto',
@@ -13,7 +14,7 @@ export class ProductoComponent implements OnInit {
   muestraSpinner = true;
   searchName = '';
 
-  constructor( private activatedRoute: ActivatedRoute, private _ProductoServiceService: ProductoServiceService) {
+  constructor( private activatedRoute: ActivatedRoute, private _ProductoServiceService: ProductoServiceService, private router: Router) {
     this.activatedRoute.params.subscribe( params =>{
          this.getProducts();
     }
@@ -36,6 +37,7 @@ export class ProductoComponent implements OnInit {
   }
 
   modificaCatalogoProductos(producto: string) {
+    this.router.navigate(['administracion/editar-productos']);
     console.log("Mayra");
   }
 
