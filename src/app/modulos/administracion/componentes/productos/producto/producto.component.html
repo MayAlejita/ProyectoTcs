@@ -2,208 +2,228 @@
 <h1 class="animated fadeIn">Productos</h1>
 <hr>
 <div class="contenedor-principal container">
-    <div class="contenedor-recuadro">
-        <table class="contenedor-principal container">
-            <tr>
-                <td class="tabla-titulo">
-                    <h5>Codigo </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="codigo"> </td>
+  <div class="contenedor-recuadro">
+    <table class="contenedor-principal container">
+      <tr>
+        <td class="tabla-titulo">
+          <h5>Codigo </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="codigo"></td>
 
-                <td class="tabla-titulo">
-                    <h5>Nombre </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Nombre"> </td>
+        <td class="tabla-titulo">
+          <h5>Nombre </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Nombre"></td>
 
-                <td class="tabla-titulo">
-                    <h5>Descripcion </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Descripcion"> </td>
-            </tr>
+        <td class="tabla-titulo">
+          <h5>Descripcion </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Descripcion"></td>
+      </tr>
 
-            <tr>
-                <td class="tabla-titulo">
-                    <h5>Precio de compra </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Precio de compra"> </td>
+      <tr>
+        <td class="tabla-titulo">
+          <h5>Precio de compra </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Precio de compra"></td>
 
-                <td class="tabla-titulo">
-                    <h5>Precio de venta </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Precio de venta"> </td>
+        <td class="tabla-titulo">
+          <h5>Precio de venta </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Precio de venta"></td>
 
-                <td class="tabla-titulo">
-                    <h5>Farmaceutica </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Farmaceutica"> </td>
-            </tr>
+        <td class="tabla-titulo">
+          <h5>Farmaceutica </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Farmaceutica"></td>
+      </tr>
 
-            <tr>
-                <td class="tabla-titulo">
-                    <h5>Concentracion</h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Concentracion"> </td>
+      <tr>
+        <td class="tabla-titulo">
+          <h5>Concentracion</h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Concentracion"></td>
 
-                <td class="tabla-titulo">
-                    <h5>Registro sanitario </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Registro sanitario "> </td>
+        <td class="tabla-titulo">
+          <h5>Registro sanitario </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Registro sanitario "></td>
 
-                <td class="tabla-titulo">
-                    <h5>Estado </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Estado"> </td>
-            </tr>
+        <td class="tabla-titulo">
+          <h5>Estado </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Estado"></td>
+      </tr>
 
 
-            <tr>
-                <td class="tabla-titulo">
-                    <h5>transaccion</h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="transaccion"> </td>
+      <tr>
+        <td class="tabla-titulo">
+          <h5>transaccion</h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="transaccion"></td>
 
-                <td class="tabla-titulo">
-                    <h5>Fecha transaccion </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Fecha_transaccion"> </td>
+        <td class="tabla-titulo">
+          <h5>Fecha transaccion </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Fecha_transaccion"></td>
 
-                <td class="tabla-titulo">
-                    <h5>Usuario </h5>
-                </td>
-                <td class="tabla-columna-secundaria"><input type="text" placeholder="Usuario"> </td>
-            </tr>
-            <tr class="contenedor-boton">
-                <td><button class="tabla-columna-boton" (click)="guardarProducto()">Guardar</button></td>
-            </tr>
-        </table>
-    </div>
+        <td class="tabla-titulo">
+          <h5>Usuario </h5>
+        </td>
+        <td class="tabla-columna-secundaria"><input type="text" placeholder="Usuario"></td>
+      </tr>
+      <tr class="contenedor-boton">
+        <td>
+          <button class="tabla-columna-boton" (click)="guardarProducto()">Guardar</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
 <div class="contenedor-principal container">
-    <div class="contenedor-recuadro">
-        <div class="contenedor-principal container">
-            <!-- <button class="btn btn-warning" routerLink="/home/catalogomodifica" skipLocationChange> Agregar nuevo </button>-->
-            <div class="contenedor-busqueda pull-right">
-                <label class="search">
-                <i class="fa fa-search search-icon"></i>
-                <mat-form-field class="example-full-width">
-                <input matInput [(ngModel)]="searchName" placeholder="Buscar producto" (ngModelChange)="buscarProducto($event)" type="search">
-                </mat-form-field>           
-              </label>
-            </div>
-        </div>
-        <div class="contenedor-principal container">
-            <div class="contenedor-recuadro">
-                <ul>
-                    <li class="item">
-                        <div class="row tabla-titulo">
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>ID Producto</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Codigo </h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Nombre</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Descripcion</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Precio de compra</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Precio de venta</h5>
-                            </div>
-
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Farmaceutica</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Concentracion</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Registro sanitario</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Estado</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>transaccion</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Fecha transaccion</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1">
-                                <h5>Accion</h5>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item" *ngFor="let producto of productos">
-                        <div class="row tabla-fila">
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.id_producto}}">
-                                <h5>{{producto.id_producto}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.codigo}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.codigo}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.nombre}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.nombre}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.descripcion}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.descripcion}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.precio_compra}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.precio_compra}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.precio_venta}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.precio_venta}}</h5>
-                            </div>
-
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.firma_farmaceutica}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.firma_farmaceutica}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.concentracion}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.concentracion}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.registro_sanitario}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.registro_sanitario}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.estado}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.estado}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.transaccion}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.transaccion}}</h5>
-                            </div>
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top" title="{{producto.fecha_transaccion}}">
-                                <h5 class="tabla-columna-secundaria no-wrap">{{producto.fecha_transaccion}}</h5>
-                            </div>
-
-
-                            <div class="col-11 col-sm-1 col-md-1 col-xl-1 tabla-columna-boton">
-                                <button class="btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Editar registro" 
-                                (click)="modificaCatalogoProductos(producto.codigoCatalogo)">
-                                    
-                                </button>
-                                <button class="btn btn-primary btn-sm rounded" data-toggle="tooltip" data-placement="top" title="Eliminar registro" (click)="modificaCatalogoProductos(producto.codigoCatalogo)">
-                                    <i class="fa fa-pencil-square-o"></i>
-                                </button>
-                               <!--    <button class="btn btn-primary btn-sm rounded" data-toggle="tooltip" data-placement="top" title="Desactivar registro" *ngIf="producto.eliminado == '0'" (click)="deshabilitaProducto(producto.nombre, producto.codigo, '1')">
-                                    <i class="fa fa-check-square"></i>
-                                </button>
-                               <button class="btn btn-secondary btn-sm rounded" data-toggle="tooltip" data-placement="top" title="Activar registro" *ngIf="producto.eliminado == '1'" (click)="deshabilitaProducto(producto.nombre, producto.codigo, '0')">
-                        <i class="fa fa-square-o"></i>
-                      </button>
-                                <button class="btn btn-warning btn-sm rounded" data-toggle="tooltip" data-placement="top" title="Listar detalle del catálogo" (click)="listaDetalleCatalogoMaestro(catalogoMaestro)">
-                        <i class="fa fa-check-circle-o"></i>
-                      </button>-->
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
+  <div class="contenedor-recuadro">
+    <div class="contenedor-principal container">
+      <!-- <button class="btn btn-warning" routerLink="/home/catalogomodifica" skipLocationChange> Agregar nuevo </button>-->
+      <div class="contenedor-busqueda pull-right">
+        <label class="search">
+          <i class="fa fa-search search-icon"></i>
+          <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="searchName" placeholder="Buscar producto"
+                   (ngModelChange)="buscarProducto($event)" type="search">
+          </mat-form-field>
+        </label>
+      </div>
     </div>
+    <div class="contenedor-principal container">
+      <div class="contenedor-recuadro">
+        <ul>
+          <li class="item">
+            <div class="row tabla-titulo">
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>ID Producto</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Codigo </h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Nombre</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Descripcion</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Precio de compra</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Precio de venta</h5>
+              </div>
+
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Farmaceutica</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Concentracion</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Registro sanitario</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Estado</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>transaccion</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Fecha transaccion</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1">
+                <h5>Accion</h5>
+              </div>
+            </div>
+          </li>
+          <li class="item" *ngFor="let producto of productos">
+            <div class="row tabla-fila">
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.id_producto}}">
+                <h5>{{producto.id_producto}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.codigo}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.codigo}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.nombre}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.nombre}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.descripcion}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.descripcion}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.precio_compra}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.precio_compra}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.precio_venta}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.precio_venta}}</h5>
+              </div>
+
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.firma_farmaceutica}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.firma_farmaceutica}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.concentracion}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.concentracion}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.registro_sanitario}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.registro_sanitario}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.estado}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.estado}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.transaccion}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.transaccion}}</h5>
+              </div>
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1" data-toggle="tooltip" data-placement="top"
+                   title="{{producto.fecha_transaccion}}">
+                <h5 class="tabla-columna-secundaria no-wrap">{{producto.fecha_transaccion}}</h5>
+              </div>
+
+
+              <div class="col-11 col-sm-1 col-md-1 col-xl-1 tabla-columna-boton">
+                <button mat-icon-button color="primary"
+                        (click)="modificaCatalogoProductos(producto.codigoCatalogo)"
+                        title="Edit Product">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="primary"
+                        (click)="modificaCatalogoProductos(producto.codigoCatalogo)"
+                        title="Delete Product">
+                  <mat-icon>delete</mat-icon>
+                </button>
+
+
+                <!--    <button class="btn btn-primary btn-sm rounded" data-toggle="tooltip" data-placement="top" title="Desactivar registro" *ngIf="producto.eliminado == '0'" (click)="deshabilitaProducto(producto.nombre, producto.codigo, '1')">
+                     <i class="fa fa-check-square"></i>
+                 </button>
+                <button class="btn btn-secondary btn-sm rounded" data-toggle="tooltip" data-placement="top" title="Activar registro" *ngIf="producto.eliminado == '1'" (click)="deshabilitaProducto(producto.nombre, producto.codigo, '0')">
+         <i class="fa fa-square-o"></i>
+       </button>
+                 <button class="btn btn-warning btn-sm rounded" data-toggle="tooltip" data-placement="top" title="Listar detalle del catálogo" (click)="listaDetalleCatalogoMaestro(catalogoMaestro)">
+         <i class="fa fa-check-circle-o"></i>
+       </button>-->
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
 
 </div>
