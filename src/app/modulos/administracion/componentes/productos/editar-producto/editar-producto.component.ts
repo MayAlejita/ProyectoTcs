@@ -12,4 +12,7 @@ export class EditarProductoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  guardarProducto(){
+
+  }
 }

@@ -1,1 +1,66 @@
-<p>editar-producto</p>
+<div class="contenedor-principal container">
+    <div class="contenedor-recuadro">
+        <table class="contenedor-principal container">
+            <tr>
+                <td class="tabla-titulo">
+                    <h5>Nombre </h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Nombre"> </td>
+
+                <td class="tabla-titulo">
+                    <h5>Descripcion </h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Descripcion"> </td>
+            </tr>
+
+            <tr>
+                <td class="tabla-titulo">
+                    <h5>Precio de compra </h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Precio de compra"> </td>
+
+                <td class="tabla-titulo">
+                    <h5>Precio de venta </h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Precio de venta"> </td>
+            </tr>
+            <tr>
+                <td class="tabla-titulo">
+                    <h5>Farmaceutica </h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Farmaceutica"> </td>
+                <td class="tabla-titulo">
+                    <h5>Fecha transaccion </h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Fecha_transaccion"> </td>
+            </tr>
+
+            <tr>
+                <td class="tabla-titulo">
+                    <h5>Concentracion</h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Concentracion"> </td>
+
+                <td class="tabla-titulo">
+                    <h5>Registro sanitario </h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Registro sanitario "> </td>
+            </tr>
+            <tr>
+                <td class="tabla-titulo">
+                    <h5>Estado </h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="Estado"> </td>
+
+                <td class="tabla-titulo">
+                    <h5>transaccion</h5>
+                </td>
+                <td class="tabla-columna-secundaria"><input type="text" placeholder="transaccion"> </td>
+            </tr>
+        </table>
+        <tr class="contenedor-boton">
+            <td><button class="tabla-columna-boton" (click)="guardarProducto()">Guardar</button></td>
+            <td><input type="button" onclick="history.back()" name="Cancelar" value="Cancelar"></td>
+        </tr>        
+    </div>
+</div>
